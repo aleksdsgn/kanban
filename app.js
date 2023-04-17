@@ -51,5 +51,6 @@ function dragleave(event) {
 // когда мы отпустили
 function dragdrop(event) {
   // console.log('drag drop');
+  event.target.classList.remove('hovered');
   event.target.append(item);
 }
