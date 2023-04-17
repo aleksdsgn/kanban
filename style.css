@@ -59,3 +59,11 @@ body {
 .item:active {
   cursor: grabbing;
 }
+
+.hold {
+  border: 5px solid #eee;
+}
+
+.hide {
+  display: none;
+}
