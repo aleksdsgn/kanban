@@ -5,7 +5,6 @@ item.addEventListener('dragstart', dragstart);
 item.addEventListener('dragend', dragend);
 
 for (const placeholder of placeholders) {
-  // console.log(placeholder);
   // когда перетаскиваемый элемент находится над плейсхолдером
   placeholder.addEventListener('dragover', dragover)
   // когда мы заходим на территорию плейсхолдера
@@ -17,13 +16,11 @@ for (const placeholder of placeholders) {
 }
 
 function dragstart(event) {
-  // console.log('dragstart', event.target);
   event.target.classList.add('hold');
   setTimeout(() => event.target.classList.add('hide'), 0);
 }
 
 function dragend(event) {
-  // console.log('dragend');
   // удалить следующие классы или... 
   // event.target.classList.remove('hold', 'hide');
   // перетереть все классы и добавить только один
@@ -45,12 +42,10 @@ function dragenter(event) {
 // когда перетащили и вышли с территории плейсхолдера
 function dragleave(event) {
   event.target.classList.remove('hovered');
-  // console.log('drag leave');
 }
 
 // когда мы отпустили
 function dragdrop(event) {
-  // console.log('drag drop');
   event.target.classList.remove('hovered');
   event.target.append(item);
 }
